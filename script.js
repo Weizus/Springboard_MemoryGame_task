@@ -1,5 +1,9 @@
 const gameContainer = document.getElementById("game");
-
+let clickedCards = 0;
+let pairs = 0;
+let wait = false;
+let card1 = null;
+let card2 = null;
 
 const COLORS = [
   "red",
@@ -60,8 +64,12 @@ function createDivsForColors(colorArray) {
 
 // TODO: Implement this function!
 function handleCardClick(event) {
+  let currentCard = event.target;
   // you can use event.target to see which element was clicked
-  console.log("you just clicked", event.target);
+  console.log("you just clicked", currentCard);
+  currentCard.style.backgroundColor = currentCard.classList[0];
+  // Things I didn't know was possible with javascript
+
 }
 
 // when the DOM loads
