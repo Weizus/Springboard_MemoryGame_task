@@ -77,7 +77,6 @@ function handleCardClick(event) {
   }
 if (card1 && card2) {
     wait = true;
-
     if (card1.className === card2.className) {
       cardsFlipped += 2;
       card1.removeEventListener("click", handleCardClick);
@@ -98,7 +97,7 @@ if (card1 && card2) {
     }
   }
 
-  if (cardsFlipped === COLORS.length) alert("game over!");
+  if (cardsFlipped === COLORS.length) {alert("You win!")};
 }
 
 // when the DOM loads
